@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import numpy as np
+import math
+# xpoints = [0, 6]
+# ypoints = [0, 25]
+# plt.plot(xpoints, ypoints)
+# plt.show()
+class point:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+        self.L =(self.x,self.y)
+    def __str__(self):
+        return f"{self.x},{self.y}"
+    
+    def distance(self,other):
+        x = self.x - other.x
+        y = self.y - other.y
+        return math.sqrt(x**2 + y**2)
+
+sun = point(5,6)
+print(sun.x)
+plt.xlim = (0,10)
+plt.ylim = (0,10)
+plt.plot([sun.x],[sun.y],'o')
+plt.show(block=True)
